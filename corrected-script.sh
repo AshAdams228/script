@@ -30,7 +30,7 @@ sudo tee >/home/ash/docker_project/docker-compose.yml <<-EOF
     apache: 
       image: httpd:2.4 
       ports: 
-      - "8080:8080" 
+      - "8080:80" 
       volumes: 
       - ./src:/usr/local/apache2/htdocs 
 
@@ -48,6 +48,5 @@ sudo tee >/home/ash/docker_project/docker-compose.yml <<-EOF
       ports: 
       - "4000:4000"
 EOF
-#docker pull bitnami/apache
-#docker run -dit --name apche -p 8080:8080 bitnami/apache:latest
+
 docker-compose up -d
