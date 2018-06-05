@@ -22,7 +22,7 @@ FROM nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
 EOF
-cd /home/ash/docker_project
+cd /home/docker_project
 sudo tee >/home/docker_project/docker-compose.yml <<-EOF
  version: '3' 
     
