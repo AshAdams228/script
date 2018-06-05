@@ -14,7 +14,7 @@ sudo systemctl enable docker.service && systemctl start docker.service
 sudo yum -y install epel-release
 sudo yum -y install python-pip
 sudo pip install docker-compose
-sudo tee >/home/ash/docker_project/Dockerfile <<-EOF
+sudo tee >/home/docker_project/Dockerfile <<-EOF
 FROM httpd:2.4
 COPY ./public-html/ /usr/local/apache2/htdocs
 
@@ -23,7 +23,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 EOF
 cd /home/ash/docker_project
-sudo tee >/home/ash/docker_project/docker-compose.yml <<-EOF
+sudo tee >/home/docker_project/docker-compose.yml <<-EOF
  version: '3' 
     
  services:
